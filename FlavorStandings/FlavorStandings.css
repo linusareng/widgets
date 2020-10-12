@@ -6,36 +6,36 @@ body,
     font-family: Montserrat;
     background: none !important;
 }
-.la-standings-wrapper {
+.la-widget-wrapper {
     background:rgba(0,0,0,.0);
 }
-.la-standings {
+ul.la-widget {
     display: grid;
     color: white;
     font-size: 9px;
 }
 
-.la-standings li:first-child {
+.la-widget li:first-child {
     /* the header row */
     background: none !important;
 }
 
-.la-standings .la-row.la-header {
+.la-widget .la-row.la-header {
     color: white;
     }
 
-.la-standings .la-row.la-highlighted {
+.la-widget .la-row.la-highlighted {
     color: yellow;
 }
 
-.la-standings .la-row.la-rel-lap-down {
+.la-widget .la-row.la-col-lap-down {
     color: purple;
 }
 
-.la-standings .la-row.la-rel-lap-up {
+.la-widget .la-row.la-col-lap-up {
     color: red;
 }
-.la-standings .la-row.la-header div {
+.la-widget .la-row.la-header div {
     background: rgba(0,0,0,.4);
     color: white;
 }
@@ -58,7 +58,7 @@ body,
     z-index: -1;
 }
 
-.la-standings li.la-row {
+.la-widget li.la-row {
     position: relative;
     z-index:1;
     display: grid;
@@ -239,7 +239,7 @@ body,
     color: white;
     font-size: 7px;
 }
-.la-standings li.la-row .la-name {
+.la-widget li.la-row .la-name {
     font-weight: 600;
     padding-left: 4px;
     text-align: left;
@@ -343,7 +343,7 @@ ul, li {
     padding: 0;
     list-style: none;
 }
-.la-standings li.la-footer {
+.la-widget li.la-footer {
     box-sizing: border-box;
     grid-gap: 0;
     display: grid;

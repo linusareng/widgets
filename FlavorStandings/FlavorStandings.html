@@ -1,4 +1,4 @@
-<div class="la-standings-wrapper">
+<div class="la-widget-wrapper">
     <div style="background:rgba(0,0,0,.6);font-size: 9px;display:none;">
         <h2>
             EXPERIMENTAL OVERLAY:<br />
@@ -79,7 +79,7 @@
         -->
  
 
-    <ul class="la-standings">
+    <ul class="la-widget">
         <li class="la-header la-row">
             <div class="la-qualifying"></div>
             <div class="la-pos">P</div>
@@ -96,14 +96,9 @@
                                +  ' SIMRacingApps-Widget-Standings-GridRowBackground-' + (data.Car[position].IsEqual.TRANSMITTING.Value ? 'talking' : (data.Car[position].IsEqual.REFERENCE.Value ? 'reference' : 'none'))"
             data-sra-args-interval="{{defaultInterval}}">
 
-            <!-- qualifying
-    <div class="la-qualifying"
-         data-sra-args-interval="{{defaultInterval}}"
-         data-sra-data="Car/{{position}}/PositionClassQualifying"
-         data-ng-bind="data.Car.{{position}}.PositionClassQualifying.Value">
-    </div>
-        -->
+            <!-- qualifying result -->
             <div class="la-qualifying"></div>
+
             <!-- position in class, ie realposition -->
             <div class="la-pos la-skew la-skew-orange"
                  data-sra-data="Car/{{position}}/PositionClass;Session/NumberOfCarClasses;Car/{{position}}/ClassColor"
