@@ -1,0 +1,14 @@
+{
+  "doc": "JavaScriptDoc/sra-relative.html",
+  "name": [
+    "FlavorStandings"
+  ],
+  "description": [
+    "Shows top drivers"
+  ],
+  "url": "apps/WidgetLoader?widget=FlavorStandings&",
+  "icon": "widgets/FlavorStandings/icon.png",
+  "width": [ 800 ],
+  "height": [ 480 ],
+  "args": ""
+}

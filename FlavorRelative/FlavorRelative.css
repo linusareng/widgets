@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.la-relative {
+    display: grid;
+    color: white;
+    font-size: 9px;
+}
+
+    .la-relative li:first-child {
+        padding-top: 10px !important;
+    }
+
+    .la-relative li:last-child {
+        padding-bottom: 10px !important;
+    }
+
+    .la-relative .la-row.la-header {
+        background: rgba(0,0,0,.4);
+    }
+
+    .la-relative .la-row.la-highlighted {
+        color: yellow;
+    }
+
+    .la-relative .la-row.la-rel-lap-down {
+        color: purple;
+    }
+
+    .la-relative .la-row.la-rel-lap-up {
+        color: red;
+    }
+
+.la-item.la-item-inverted {
+    color: black;
+    padding: 0 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.la-item-inverted::after {
+    content: '';
+    border-radius: 4px;
+    transform: skew(10deg);
+    background: rgba(255,255,255,.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.la-relative li.la-row {
+    background: rgba(0,0,0,1);
+    display: grid;
+    padding: 2px 2px 1px 12px;
+    margin-bottom: 0px;
+    line-height: 14px;
+    text-align: center;
+    box-sizing: border-box;
+    grid-column-gap: 0px;
+    grid-template-columns:
+    /* position */
+    24px
+    /* car number */
+    30px
+    /* driver name or team name */
+    auto
+    /* irating */
+    30px
+    /* interval */
+    40px
+    /* tyre */
+    30px;
+}
+
+.la-row div {
+    box-sizing: border-box;
+    margin-right: 4px;
+}
+
+.la-pos {
+    color: black;
+    font-weight: 600;
+    font-size: 8px;
+}
+
+.la-carnumber {
+    border-radius: 4px;
+    padding: 0 1px;
+    color: rgba(155,50,0,1);
+    color: white;
+    font-size: 8px;
+}
+.la-relative li.la-row .la-name {
+    font-weight: 600;
+    padding-left: 4px;
+    text-align: left;
+    max-width: 150px;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.la-ir {
+    color: black;
+    font-weight: 600;
+    font-size: 8px;
+}
+
+.la-int {
+    color: white;
+    text-align: right;
+}
+
+.la-tyre {
+    margin: 0 4px;
+    width: 22px;
+    color: white;
+}
+
+.la-lastlap {
+    text-align: left;
+}
+
+.la-skew {
+    position: relative;
+    z-index: 2;
+    padding-top: 1px;
+}
+
+    .la-skew.la-skew-white::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        transform: skew(-10deg);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+    .la-skew.la-skew-white-border::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 0.5px solid white;
+        transform: skew(-10deg);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+    .la-skew.la-skew-orange-border::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 0.5px solid darkorange;
+        transform: skew(-10deg);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+    .la-skew.la-skew-orange::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: darkorange;
+        transform: skew(-10deg);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+.la-rel-class-1 .la-pos::after {
+    background: blue;
+}
+
+.la-rel-class-2 .la-pos::after {
+    background: pink;
+}
+
+.la-text-left {
+    text-align: left;
+}
+
+.la-fixed-width-font {
+    font-family: "Roboto Mono";
+}
+
+body {
+    font-family: Montserrat;
+    background: #444;
+}
+
+.wrapper {
+    margin: 40px;
+    padding: 20px;
+    width: 450px;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

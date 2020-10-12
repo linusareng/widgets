@@ -1,0 +1,17 @@
+{
+  "doc": "JavaScriptDoc/sra-relative.html",
+  "name": [
+    "FlavorRelative"
+  ],
+  "description": [
+    "Shows Drivers Nearby"
+  ],
+  "url": "apps/WidgetLoader?widget=FlavorRelative&",
+  "icon": "widgets/FlavorRelative/icon.png",
+  "width": [ 800 ],
+  "height": [ 480 ],
+  "args": [
+    "",
+    "BYLOCATION=true"
+  ]
+}

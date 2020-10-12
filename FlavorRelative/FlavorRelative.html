@@ -1,0 +1,53 @@
+<ul class="la-relative">
+
+    
+    <li class="la-row"
+        data-ng-repeat="position in positions"
+        data-ng-style="{ visibility: data.Car[position].Id.Value == -1 ? 'hidden' : 'inherit' }"
+        data-ng-class="'SIMRacingAppsCarStatusClassForeground-'    + data.Car[position].StatusClass.Value
+                               +  ' SIMRacingApps-Widget-Relative-GridRowBackground-' + (data.Car[position].IsEqual.TRANSMITTING.Value ? 'talking' : (data.Car[position].IsEqual[sraRelativeCar].Value ? 'reference' : 'none'))"
+        data-ng-class-odd="'la-rel-odd-row'"
+        data-ng-class-even="'la-rel-even-row'">
+
+        <!-- overall position -->
+        <div style="display:none;" class="la-pos la-skew la-skew-orange"
+             data-ng-bind="data.Car[position].Position.Value">
+        </div>
+
+        <!-- position in class, ie realposition -->
+        <div class="la-pos la-skew la-skew-orange"
+             data-ng-bind="data.Car[position].PositionClass.Value">
+        </div>
+
+        <!-- carnumber -->
+        <div class="la-carnumber la-skew la-skew-orange-border"
+             data-sra-car-number="{{position}}"
+             data-sra-args-interval="{{sraInterval}}"
+             ng-bind="data.Car[value].Number.Value">
+        </div>
+
+        <!-- driver or team name -->
+        <div class="la-name"
+             data-sra-data="Car/{{position}}/DriverName;Car/{{position}}/TeamName"
+             data-ng-bind-html="(data.Car[position].DriverName.Value|sraEncodeEntities)">
+        </div>
+
+        <!-- irating -->
+        <div class="la-ir la-skew la-skew-white"
+             data-sra-data="Car/{{position}}/DriverRating"
+             ng-model="data.Car[position].DriverRating.Value">
+            {{ (data.Car[position].DriverRating.Value.split('-')[0] / 1000) | number:1 }}k
+        </div>
+
+        <!-- interval -->
+        <div class="la-int la-fixed-width-font"
+             data-ng-bind="(data.Session.DiffCarsRelative[sraRelativeCar][position] | sraDuration:'1')">
+        </div>
+
+        <!-- tyre -->
+        <div class="la-tyre la-skew la-skew-white-border">
+            na
+        </div>
+    </li>
+
+</ul> <!-- END of <table class = "SIMRacingApps-Widget-Relative"> -->

@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+
+body,
+.SIMRacingApps-App-WidgetLoader-body {
+    font-family: Montserrat;
+    background: none !important;
+}
+.la-standings-wrapper {
+    background:rgba(0,0,0,.0);
+}
+.la-standings {
+    display: grid;
+    color: white;
+    font-size: 9px;
+}
+
+.la-standings li:first-child {
+    /* the header row */
+    background: none !important;
+}
+
+.la-standings .la-row.la-header {
+    color: white;
+    }
+
+.la-standings .la-row.la-highlighted {
+    color: yellow;
+}
+
+.la-standings .la-row.la-rel-lap-down {
+    color: purple;
+}
+
+.la-standings .la-row.la-rel-lap-up {
+    color: red;
+}
+.la-standings .la-row.la-header div {
+    background: rgba(0,0,0,.4);
+    color: white;
+}
+.la-item.la-item-inverted {
+    color: black;
+    padding: 0 2px;
+    position: relative;
+    z-index: 2;
+}
+.la-item-inverted::after {
+    content: '';
+    border-radius: 4px;
+    transform: skew(10deg);
+    background: rgba(255,255,255,.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.la-standings li.la-row {
+    position: relative;
+    z-index:1;
+    display: grid;
+    margin: 0px;
+    line-height: 14px;
+    text-align: center;
+    box-sizing: border-box;
+    grid-column-gap: 0px;
+    grid-template-columns:
+    /* qualifying 18px */
+    4px
+    /* position */
+    20px
+    /* car number */
+    26px
+    /* driver name or team name */
+    100px
+    /* irating */
+    28px
+    /* gap */
+    45px
+    /* hanging */
+    55px
+}
+.la-row div.la-qualifying {
+    padding: 0;
+}
+.la-row div.la-row-hanging {
+    background: rgba(0,0,0,.1);
+    padding-left: 5px;
+    color: #fff !important;
+}
+.la-row div {
+    box-sizing: border-box;
+    padding: 2px 4px 2px 4px;
+    background: rgba(0,0,0,.9);
+    position: relative;
+}
+/* rows according to sra */
+.la-row.SIMRacingAppsCarStatusClassForeground-ONTRACK-REFERENCE .la-name {
+    color: yellow !important;
+}
+.la-row.SIMRacingApps-Widget-Standings-GridRowBackground-reference::before {
+    content: '';
+    width: 2px;
+    height: 60%;
+    background: yellow;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index:2;
+}
+.la-row.SIMRacingAppsCarStatusClassForeground-ONTRACK-LEADER .la-name {
+    color: #fff !important;
+}
+/*
+    car and track statuses we can use
+    APPROACHINGPITS
+    ENTERINGPITSTALL
+    EXITINGPITSTALL
+    INGARAGE
+    INPITSTALL
+    INVALID
+    LEAVINGPITS
+    OFFTRACK
+    ONPITROAD
+    ONTRACK
+    TOWING
+*/
+.la-row div.la-carstatus {
+    display: none;
+    background: none;
+    color: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 8px;
+    padding:2px 6px;
+}
+.la-carstatus .la-carstatus-text {
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+.la-row.SIMRacingAppsCarStatusClassForeground-ONPITROAD 
+.la-carstatus .la-carstatus-text.la-pitroad {
+    display: inline;
+}
+.la-row.SIMRacingAppsCarStatusClassForeground-INVALID
+.la-carstatus .la-carstatus-text.la-invalid,
+.la-row.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND
+.la-carstatus .la-carstatus-text.la-invalid,
+.la-row.SIMRacingAppsCarStatusClassForeground-INVALID
+.la-carstatus,
+.la-row.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND
+.la-carstatus {
+    display: inline;
+    color:#fff;
+    font-size: 16px;
+    font-weight:300;
+}
+
+.la-row.SIMRacingAppsCarStatusClassForeground-INVALID
+.la-row-hanging,
+.la-row.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND
+.la-row-hanging {
+    display:none;
+}
+
+.la-row.SIMRacingAppsCarStatusClassForeground-INVALID
+.la-carstatus::after,
+.la-row.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND
+.la-carstatus::after {
+    background: none;
+}
+.la-row.SIMRacingAppsCarStatusClassForeground-INPITSTALL
+.la-carstatus .la-carstatus-text.la-inpit,
+.la-row.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL
+.la-carstatus .la-carstatus-text.la-inpit,
+.la-row.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL
+.la-carstatus .la-carstatus-text.la-inpit {
+    display: inline;
+}
+.la-row.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS
+.la-carstatus .la-carstatus-text.la-pitting {
+    display: inline;
+}
+.la-row.SIMRacingAppsCarStatusClassForeground-TOWING
+.la-carstatus .la-carstatus-text.la-towing {
+    display: inline;
+}
+.la-row.SIMRacingAppsCarStatusClassForeground-INPITSTALL-REFERENCE .la-carstatus,
+.la-row.SIMRacingAppsCarStatusClassForeground-INPITSTALL .la-carstatus,
+.la-row.SIMRacingAppsCarStatusClassForeground-ONPITROAD .la-carstatus {
+    display: block;
+    position: absolute;
+    right: 2px;
+    top: 0;
+    z-index: 1;
+    padding: 2px 6px;
+    color: #000;
+    font-weight: 400;
+    font-size: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.la-carstatus::after {
+    position: absolute !important;
+    content: '';
+    background: darkorange;
+    transform: skew(-10deg);
+    border-radius: 4px;
+    z-index: 1;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+}
+
+.la-qualifying {
+    color: rgba(255,255,255,.5);
+    font-size: 7px;
+}
+.la-row:first-child .la-qualifying {
+    border-top-left-radius: 4px;
+}
+.la-pos {
+    color: black;
+    font-weight: 800;
+    font-size: 8px;
+    padding-left: 4px;
+    background: rgba(0,0,0,1);
+}
+
+.la-carnumber {
+    padding-left: 4px!important;
+    color: rgba(155,50,0,1);
+    color: white;
+    font-size: 7px;
+}
+.la-standings li.la-row .la-name {
+    font-weight: 600;
+    padding-left: 4px;
+    text-align: left;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size: 9px;
+}
+
+.la-ir {
+    color: black;
+    font-weight: 600;
+    font-size: 8px;
+    width: 28px;
+    padding-left: 4px !important;
+}
+
+.la-int {
+    color: white;
+    text-align: right;
+}
+.la-row:first-child .la-gap {
+    border-top-right-radius: 4px;
+}
+.la-tyre {
+    margin: 0 4px;
+    width: 22px;
+    color: white;
+}
+.la-lastlap {
+    text-align: left;
+}
+
+.la-skew {
+    position: relative;
+    z-index: 2;
+}
+
+    .la-skew.la-skew-white::after,
+    .la-skew.la-skew-white-border::after,
+    .la-skew.la-skew-orange::after,
+    .la-skew.la-skew-orange-border::after {
+        top: 2px;
+        bottom: 2px;
+        left: 2px;
+        right: 2px;
+    }
+    .la-skew.la-skew-white::after {
+        position: absolute;
+        content: '';
+        background: white;
+        transform: skew(-10deg);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+    .la-skew.la-skew-white-border::after {
+        position: absolute;
+        content: '';
+        border: 0.5px solid white;
+        transform: skew(-10deg);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+    .la-skew.la-skew-orange-border::after {
+        position: absolute;
+        content: '';
+        border: 0.5px solid darkorange;
+        transform: skew(-10deg);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+    .la-skew.la-skew-orange::after {
+        position: absolute;
+        content: '';
+        background: darkorange;
+        transform: skew(-10deg);
+        border-radius: 4px;
+        z-index: -1;
+    }
+
+.la-text-left {
+    text-align: left;
+}
+.la-text-right {
+    text-align:right;
+}
+
+.la-fixed-width-font {
+    font-family: "Roboto Mono";
+}
+.wrapper {
+    margin: 40px;
+    padding: 20px;
+    width: 450px;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.la-standings li.la-footer {
+    box-sizing: border-box;
+    grid-gap: 0;
+    display: grid;
+    grid-template-columns: 118px 94px;
+    background: rgba(0,0,0,.9);
+    line-height: 14px;
+    padding: 5px;
+    font-size: 8px;
+    width: 223px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.la-footer-right {
+    text-align: right;
+}
+.la-footer-left {
+
+}
+
+.la-footer span.la-item {
+    display: inline-block;
+}
+
+    .la-footer span.la-item + span.la-item {
+        margin-left: 4px;
+    }
