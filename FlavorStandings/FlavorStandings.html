@@ -91,7 +91,7 @@
         <li class="la-row"
             data-ng-repeat="position in ['PC1', 'PC2','PC3','PC4','PC5','PC6','PC7','PC8','PC9','PC10', 'PC11','PC12','PC13','PC14','PC15','PC16','PC17']"
             data-sra-data="Car/{{position}}/Id;Car/{{position}}/StatusClass;Car/{{position}}/IsEqual/TRANSMITTING;Car/{{position}}/IsEqual/REFERENCE"
-            data-ng-style="{ visibility: data.Car[position].Id.Value == -1 ? 'hidden' : 'inherit' }"
+            data-ng-style="{ display: data.Car[position].Id.Value == -1 ? 'none' : 'inherit' }"
             data-ng-class="'SIMRacingAppsCarStatusClassForeground-'    + data.Car[position].StatusClass.Value
                                +  ' SIMRacingApps-Widget-Standings-GridRowBackground-' + (data.Car[position].IsEqual.TRANSMITTING.Value ? 'talking' : (data.Car[position].IsEqual.REFERENCE.Value ? 'reference' : 'none'))"
             data-sra-args-interval="{{defaultInterval}}">
@@ -147,7 +147,7 @@
                  data-sra-args-interval="{{defaultInterval}}"
                  data-sra-data="Car/{{position}}/DriverRating"
                  ng-model="data.Car[position].DriverRating.Value">
-                {{ (data.Car[position].DriverRating.Value.split('-')[0] / 1000) | number:1 }}k
+                {{ (data.Car[position].DriverRating.Value.split('-')[0]/1000)|number:1}}k
             </div>
 
             <!-- gap -->
