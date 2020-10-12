@@ -1,13 +1,13 @@
 {
   "doc": "JavaScriptDoc/sra-relative.html",
   "name": [
-    "FlavorStandings"
+    "LA-standings"
   ],
   "description": [
     "Shows top drivers"
   ],
-  "url": "apps/WidgetLoader?widget=FlavorStandings&",
-  "icon": "widgets/FlavorStandings/icon.png",
+  "url": "apps/WidgetLoader?widget=LAstandings&",
+  "icon": "widgets/LAstandings/icon.png",
   "width": [ 800 ],
   "height": [ 480 ],
   "args": ""

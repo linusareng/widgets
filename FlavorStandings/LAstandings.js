@@ -19,13 +19,13 @@
  * @copyright Copyright (C) 2015 - 2020 Jeffrey Gilliam
  * @license Apache License 2.0
  */
-define(['SIMRacingApps', 'css!widgets/FlavorStandings/FlavorStandings', 'widgets/CarNumber/CarNumber'],
+define(['SIMRacingApps', 'css!widgets/LAstandings/LAstandings', 'widgets/CarNumber/CarNumber'],
     function (SIMRacingApps) {
 
         var self = {
-            name: 'sraFlavorStandings',
-            url: 'FlavorStandings',
-            template: 'FlavorStandings.html',
+            name: 'sraLA-standings',
+            url: 'LAstandings',
+            template: 'LAstandings.html',
             defaultWidth: 1400,
             defaultHeight: 1800,
             defaultInterval: 1000, //initialize with the default interval
