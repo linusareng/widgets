@@ -23,7 +23,7 @@ define(['SIMRacingApps', 'css!widgets/LAstandings/LAstandings', 'widgets/CarNumb
     function (SIMRacingApps) {
 
         var self = {
-            name: 'sraLA-standings',
+            name: 'sraLAstandings',
             url: 'LAstandings',
             template: 'LAstandings.html',
             defaultWidth: 1400,
