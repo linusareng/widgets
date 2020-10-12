@@ -1,13 +1,13 @@
 {
   "doc": "JavaScriptDoc/sra-relative.html",
   "name": [
-    "FlavorRelative"
+    "LArelative"
   ],
   "description": [
     "Shows Drivers Nearby"
   ],
-  "url": "apps/WidgetLoader?widget=FlavorRelative&",
-  "icon": "widgets/FlavorRelative/icon.png",
+  "url": "apps/WidgetLoader?widget=LArelative&",
+  "icon": "widgets/LArelative/icon.png",
   "width": [ 800 ],
   "height": [ 480 ],
   "args": [

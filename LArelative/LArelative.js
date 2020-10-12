@@ -20,13 +20,13 @@
  * @copyright Copyright (C) 2015 - 2020 Jeffrey Gilliam
  * @license Apache License 2.0
  */
-define(['SIMRacingApps','css!widgets/FlavorRelative/FlavorRelative','widgets/CarNumber/CarNumber'],
+define(['SIMRacingApps','css!widgets/LArelative/LArelative','widgets/CarNumber/CarNumber'],
 function(SIMRacingApps) {
 
     var self = {
-        name:            'sraFlavorRelative',
-        url:             'FlavorRelative',
-        template:        'FlavorRelative.html',
+        name:            'sraLArelative',
+        url:             'LArelative',
+        template:        'LArelative.html',
         defaultWidth:    287,
         defaultHeight:   181,
         defaultInterval: 300, //initialize with the default interval
