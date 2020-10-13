@@ -60,39 +60,18 @@
 
         <!-- tyre -->
         <div class="la-tyre la-skew la-skew-white-border">
-            na
+            -
         </div>
 
     </li>
 
-    <li class="la-footer"
-            data-sra-data="Session/Type;Session/Lap;Session/Laps;Session/LapsToGo;Session/TimeRemaining"
-            data-sra-args-interval="{{defaultInterval}}">
+    <li class="la-footer">
             <div class="la-footer-left">
-                <span style="font-weight:800;color: #000!important;padding-left: 4px;padding-right: 4px;" class="la-item la-item-inverted"
-                      data-ng-bind="data.Session.Type.ValueFormatted"></span>
-                <span class="la-item la-fixed-width-font"
-                      data-ng-bind="data.Session.Lap.Value+'/'+ ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true) + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? '~' : '')">
-                </span>
-
-                <span class="la-fixed-width-font"
-                      data-ng-bind="data.Session.TimeRemaining.Value ? (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) : ''"></span>
-
+                Here be dragons
             </div>
-            <div class="la-footer-right"
-                 data-sra-data="
-                    Session/StrengthOfField;
-                    Track/Temp/Celsius"
-                 data-sra-args-interval="{{defaultInterval}}">
-                <span class="la-item la-fixed-width-font"
-                      ng-model="data.Session.StrengthOfField.Value">
-                    SoF: {{data.Session.StrengthOfField.Value}}
-                </span>
-                <span class="la-item la-fixed-width-font"
-                      ng-model="data.Track.Temp.Celsius.Value">
-                    Track temp {{data.Track.Temp.Celsius.Value|number:0}}&deg;C
-                </span>
+            <div class="la-footer-right">
+                Here be dragons
             </div>
         </li>
 
-</ul> <!-- END of <table class = "SIMRacingApps-Widget-Relative"> -->
+</ul>
