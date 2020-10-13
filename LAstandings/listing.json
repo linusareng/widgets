@@ -7,7 +7,7 @@
     "Shows top drivers"
   ],
   "url": "apps/WidgetLoader?widget=LAstandings&",
-  "icon": "widgets/LAstandings/icon.png",
+  "icon": "widgets/LAstandings/laicon.png",
   "width": [ 800 ],
   "height": [ 480 ],
   "args": ""
