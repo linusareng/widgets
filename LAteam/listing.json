@@ -6,8 +6,8 @@
     "description": [
       "Fuel"
     ],
-    "url": "apps/WidgetLoader?widget=LAteam&",
-    "icon": "widgets/LAteam/laicon.png",
+    "url": "apps/WidgetLoader?widget=LAfuel&",
+    "icon": "widgets/LAfuel/laicon.png",
     "width": [ 800 ],
     "height": [ 480 ],
     "args": ""

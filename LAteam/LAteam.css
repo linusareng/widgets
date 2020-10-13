@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+.la-widget {
+  display: grid;
+  color: white;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrapper {
+  width: 500px;
+}
+.la-widget li.la-row {
+  border-radius: 6px;
+  background: rgba(0,0,0,.8);
+  font-size: 12px;
+  display: grid;
+  padding: 3px 0 3px 12px;
+  margin-bottom: 0px;
+  line-height: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  grid-column-gap: 1px;
+
+}
+.la-widget li.la-row.la-row-two {
+  grid-template-columns:
+    50% 50%;
+  grid-column-gap: 20px;
+}
+.la-team-name {}
+.la-driver-name {
+  color: yellow;
+}
+.la-row div {
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+.la-fuel-remaining-wrapper {
+  height: 4px;
+  background: rgba(0,0,0,.8);
+}
+.la-fuel-current-level {
+  height: 4px;
+  width: 85%;
+  background: darkorange;
+}
+.la-widget li.la-row.la-fuel-row {
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+.la-text {
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  padding-left: 5px;
+  color: white;
+}
+.la-current {
+  margin:0 4px;
+  color: black;
+}
+.la-needed {
+  margin:0 4px;
+  color: white;
+}
+.la-pitwindow {
+  margin:0 4px;
+  color: white;
+}
+.la-team-relative {
+  color: rgba(255,255,255,.6); 
+}
+.la-skew {
+  position: relative;
+  z-index:2;
+  padding-top: 1px;
+  height: 20px;
+  display: inline-block;
+  padding: 0 4px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.la-skew.la-skew-white::after {
+  position: absolute;
+  content: ''; top:0;left:0;right:0;bottom:0;
+  background: white;
+  transform: skew(-10deg);
+  border-radius: 4px;
+  z-index: -1;
+}
+.la-skew.la-skew-orange,
+.la-skew.la-skew-white {
+  color: black;
+}
+.la-skew.la-skew-orange::after {
+  position: absolute;
+  content: '';
+  top:0;left:0;right:0;bottom:0;
+  background: darkorange;
+  border: 0.5px solid darkorange;
+  transform: skew(-10deg);
+  border-radius: 4px;
+  z-index: -1;
+}
+.la-skew.la-skew-white-border::after {
+  position: absolute;
+  content: '';
+  top:0;left:0;right:0;bottom:0;
+  border: 0.5px solid white;
+  transform: skew(-10deg);
+  border-radius: 4px;
+  z-index: -1;
+}
+.la-fixed-width-font {
+  font-family: "Roboto Mono";
+}
+
+body {
+  font-family: Montserrat;
+  background: #444;
+}
