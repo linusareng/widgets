@@ -42,7 +42,7 @@
             Test tire: <span data-ng-bind="data.iRacing.VarHeaders.REFERENCE.CarIdxTireCompound.Type"></span>
         </div>
 
-      
+
     </div>
 
     <!--
@@ -77,7 +77,7 @@
     /Session/Lap
     /Session/LapsToGo
         -->
- 
+
 
     <ul class="la-standings la-widget">
         <li class="la-header la-row">
@@ -189,18 +189,15 @@
                     Track temp {{data.Track.Temp.Celsius.Value|number:0}}&deg;C
                 </span>
             </div>
+            <div class="flag-wrapper">
+                <div class="la-flag pulse-urgency"
+                     data-ng-class="image">
+                    <div class="pulse"></div>
+                </div>
+            </div>
         </li>
+        
     </ul>
     <!-- Thrown flags for me/session -->
-    <!-- test from flagsbar.html -->
-    <div class = "SIMRacingApps-Widget-FlagsBar"
-     data-ng-style                     = "{ height: height+'px' }">
-    <div class         = "SIMRacingApps-Widgets-FlagsBar-images"
-         data-ng-style = "{ visibility: flagsVisibility }">
-        <div data-ng-class="image"></div>
-    </div>
-</div>
-    <div class="flagline flagline-greenflag pulse-urgency">
-        <div class="pulse"></div>
-      </div>
+ 
 </div>

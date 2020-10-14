@@ -490,47 +490,59 @@ ul, li {
 /* 
 FLAGS 
 */
-.flagline.flagline-whiteflag {
+.flag-wrapper {
+    width: 223px;
+    height: 30px;
+    position: relative;
+    left: 4px;
+}
+.la-flag.la-flag-white {
     background: white;
     background: linear-gradient(177deg, white 50%, aqua 140%);
   }
-  .flagline.flagline-yellowflag {
+  .la-flag.la-flag-yellow {
     background: yellow;
     background: linear-gradient(177deg, yellow 50%, orange 140%);
   }
-  .flagline.flagline-greenflag {
+  .la-flag.la-flag-green {
     background: green;
     background: linear-gradient(177deg, green 50%, lightgreen 140%);
   }
-  .flagline.flagline-blueflag {
+  .la-flag.la-flag-blue {
     background: mediumpurple;
     background: linear-gradient(177deg, mediumpurple 50%, blue 140%);
   }
-  .flagline.flagline-redflag {
+  .la-flag.la-flag-red {
     background: darkred;
     background: linear-gradient(177deg, darkred 50%, black 160%);
   }
-  .flagline.flagline-blackflag {
+  .la-flag.la-flag-black {
     background: black;
     background: linear-gradient(177deg, black 50%, #333 140%);
   }
-  .flagline {
+.la-flag {
     width: 90%;
     height: 4px;
-    background: green;
-    margin: 20px auto;
+    background: transparent;
     border-radius: 2px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    box-shadow: 0 0 20px rgba(255,255,255,1);
-  }
-  .flagline.flagline-blackflag {
+    /*box-shadow: 0 0 20px rgba(255,255,255,1);*/
+}
+  .la-flag.la-flag-blackflag {
     box-shadow: 0 0 20px rgba(255,255,255,.5);
     animation: pulse-urgent 800ms ease-in-out infinite;
   }
-  
-  .flagline .pulse {
+
+.la-flag .pulse { display:none; }
+.la-flag-yellow .pulse,
+.la-flag-white .pulse,
+.la-flag-red .pulse,
+.la-flag-blue .pulse,
+.la-flag-green .pulse,
+.la-flag-black .pulse,
+.pulse {
     position: absolute;
     top: 0;
     left: 0;
@@ -540,13 +552,17 @@ FLAGS
     border-radius: 2px;
     animation: pulse 5000ms ease-in-out infinite;
     box-shadow: 0 0 10px rgba(255,255,255,.1);
-  }
-  .pulse-urgency {
+}
+.la-flag-yellow.pulse-urgency,
+.la-flag-white.pulse-urgency,
+.la-flag-red.pulse-urgency,
+.la-flag-blue.pulse-urgency,
+.la-flag-green.pulse-urgency,
+.la-flag-black.pulse-urgency {
+    box-shadow: 0 0 20px rgba(255,255,255,1);
     animation: pulse-urgent 800ms ease-in-out infinite;
-  }
-  .pulse-urgency .pulse {
-    display: none;
-  }
+}
+
   
   @keyframes pulse {
     0% { left: 0; }

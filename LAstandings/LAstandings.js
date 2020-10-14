@@ -27,7 +27,7 @@ define(['SIMRacingApps', 'css!widgets/LAstandings/LAstandings', 'widgets/CarNumb
             url: 'LAstandings',
             template: 'LAstandings.html',
             defaultWidth: 1400,
-            defaultHeight: 1800,
+            defaultHeight: 2600,
             defaultInterval: 1000, //initialize with the default interval
             module: angular.module('SIMRacingApps') //get the main module
         };
@@ -49,7 +49,7 @@ define(['SIMRacingApps', 'css!widgets/LAstandings/LAstandings', 'widgets/CarNumb
 
                             // start flag edits
                             $scope.sessionType = '';
-                            $scope.CAUTIONBLINKDURATION = 30000;
+                            $scope.CAUTIONBLINKDURATION = 6000;
                             $scope.timeStarted = 0;
                             $scope.blink = false;
                             $scope.update = function() {
@@ -96,12 +96,12 @@ define(['SIMRacingApps', 'css!widgets/LAstandings/LAstandings', 'widgets/CarNumb
                                 
                                 if (flags.length > 0) {
                                     if ($scope.displayLeft)
-                                        $scope.image  = "SIMRacingApps-Widget-FlagsBar-image-left  SIMRacingApps-Widget-FlagsBar-left-" +flags[0];
+                                        $scope.image  = "la-flag-" +flags[0];
                                     else {
                                         if (flags.length > 1)
-                                            $scope.image = "SIMRacingApps-Widget-FlagsBar-image-right SIMRacingApps-Widget-FlagsBar-right-"+flags[1];
+                                            $scope.image = "la-flag-"+flags[1];
                                         else
-                                            $scope.image = "SIMRacingApps-Widget-FlagsBar-image-right SIMRacingApps-Widget-FlagsBar-right-"+flags[0];
+                                            $scope.image = "la-flag-"+flags[0];
                                     }
                                 }
                                 else {
@@ -115,9 +115,9 @@ define(['SIMRacingApps', 'css!widgets/LAstandings/LAstandings', 'widgets/CarNumb
                                     else {
                                         //turn off flags
                                         if ($scope.displayLeft)
-                                            $scope.image  = "SIMRacingApps-Widget-FlagsBar-image-left";
+                                            $scope.image  = "la-no-flag";
                                         else
-                                            $scope.image  = "SIMRacingApps-Widget-FlagsBar-image-right";
+                                            $scope.image  = "la-no-flag";
                                     }
                                 }
 
