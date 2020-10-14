@@ -482,6 +482,79 @@ ul, li {
     display: inline-block;
 }
 
-    .la-footer span.la-item + span.la-item {
-        margin-left: 4px;
-    }
+.la-footer span.la-item + span.la-item {
+    margin-left: 4px;
+}
+
+/* flags */
+/* 
+FLAGS 
+*/
+.flagline.flagline-whiteflag {
+    background: white;
+    background: linear-gradient(177deg, white 50%, aqua 140%);
+  }
+  .flagline.flagline-yellowflag {
+    background: yellow;
+    background: linear-gradient(177deg, yellow 50%, orange 140%);
+  }
+  .flagline.flagline-greenflag {
+    background: green;
+    background: linear-gradient(177deg, green 50%, lightgreen 140%);
+  }
+  .flagline.flagline-blueflag {
+    background: mediumpurple;
+    background: linear-gradient(177deg, mediumpurple 50%, blue 140%);
+  }
+  .flagline.flagline-redflag {
+    background: darkred;
+    background: linear-gradient(177deg, darkred 50%, black 160%);
+  }
+  .flagline.flagline-blackflag {
+    background: black;
+    background: linear-gradient(177deg, black 50%, #333 140%);
+  }
+  .flagline {
+    width: 90%;
+    height: 4px;
+    background: green;
+    margin: 20px auto;
+    border-radius: 2px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 20px rgba(255,255,255,1);
+  }
+  .flagline.flagline-blackflag {
+    box-shadow: 0 0 20px rgba(255,255,255,.5);
+    animation: pulse-urgent 800ms ease-in-out infinite;
+  }
+  
+  .flagline .pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,.1);
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    animation: pulse 5000ms ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(255,255,255,.1);
+  }
+  .pulse-urgency {
+    animation: pulse-urgent 800ms ease-in-out infinite;
+  }
+  .pulse-urgency .pulse {
+    display: none;
+  }
+  
+  @keyframes pulse {
+    0% { left: 0; }
+    50% { left: calc(100% - 40px); }
+    100% { left: 0; }
+  }
+  @keyframes pulse-urgent {
+    0% { box-shadow: 0 0 10px rgba(255,255,255,.1); }
+    50% { box-shadow: 0 0 20px rgba(255,255,255,1); }
+    100% { box-shadow: 0 0 10px rgba(255,255,255,.1); }
+  }
