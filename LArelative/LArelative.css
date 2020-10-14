@@ -98,10 +98,46 @@ ul.la-widget {
     position: relative;
 }
 /* rows according to sra */
-.la-row.SIMRacingAppsCarStatusClassForeground-ONTRACK-REFERENCE .la-name {
+.la-row.ONTRACK-REFERENCE .la-name,
+.la-row.GridRowBackground-reference .la-name {
     color: yellow !important;
 }
-.la-row.SIMRacingApps-Widget-Standings-GridRowBackground-reference::before {
+.la-row.INGARAGE .la-name,
+.la-row.INGARAGE-ME .la-name,
+.la-row.INGARAGE-REFERENCE .la-name,
+.la-row.INGARAGE-LEADER .la-name,
+.la-row.TOWING .la-name,
+.la-row.TOWING-ME .la-name,
+.la-row.TOWING-REFERENCE .la-name,
+.la-row.TOWING-LEADER .la-name,
+.la-row.LEAVINGPITS .la-name,
+.la-row.LEAVINGPITS-ME .la-name,
+.la-row.LEAVINGPITS-REFERENCE .la-name,
+.la-row.LEAVINGPITS-LEADER .la-name,
+.la-row.APPROACHINGPITS .la-name,
+.la-row.APPROACHINGPITS-ME .la-name,
+.la-row.APPROACHINGPITS-REFERENCE .la-name,
+.la-row.APPROACHINGPITS-LEADER .la-name,
+.la-row.ENTERINGPITSTALL .la-name,
+.la-row.ENTERINGPITSTALL-ME .la-name,
+.la-row.ENTERINGPITSTALL-REFERENCE .la-name,
+.la-row.ENTERINGPITSTALL-LEADER .la-name,
+.la-row.EXITINGPITSTALL .la-name,
+.la-row.EXITINGPITSTALL-ME .la-name,
+.la-row.EXITINGPITSTALL-REFERENCE .la-name,
+.la-row.EXITINGPITSTALL-LEADER .la-name,
+.la-row.INPITSTALL .la-name,
+.la-row.INPITSTALL-ME .la-name,
+.la-row.INPITSTALL-REFERENCE .la-name,
+.la-row.INPITSTALL-LEADER .la-name,
+.la-row.INPITSTALL-LAPBEHIND .la-name,
+.la-row.ONPITROAD .la-name,
+.la-row.ONPITROAD-ME .la-name,
+.la-row.ONPITROAD-REFERENCE .la-name,
+.la-row.ONPITROAD-LEADER .la-name {
+    color: #666;
+}
+.la-row.GridRowBackground-reference::before {
     content: '';
     width: 2px;
     height: 60%;
@@ -109,9 +145,10 @@ ul.la-widget {
     position: absolute;
     top: 20%;
     left: 0;
-    z-index:2;
+    z-index: 2;
 }
-.la-row.SIMRacingAppsCarStatusClassForeground-ONTRACK-LEADER .la-name {
+
+.la-row.ONTRACK-LEADER .la-name {
     color: #fff !important;
 }
 /*
@@ -127,6 +164,9 @@ ul.la-widget {
     ONPITROAD
     ONTRACK
     TOWING
+    INVALID-LAPAHEAD
+    INVALID-LAPBEHIND
+    TOWING-ME ? me on everything a possibility?
 */
 .la-row div.la-carstatus {
     display: none;
@@ -136,63 +176,70 @@ ul.la-widget {
     right: 0;
     top: 0;
     font-size: 8px;
-    padding:2px 6px;
+    padding: 2px 6px;
 }
+
 .la-carstatus .la-carstatus-text {
     display: none;
     position: relative;
     z-index: 2;
 }
-.la-row.SIMRacingAppsCarStatusClassForeground-ONPITROAD 
-.la-carstatus .la-carstatus-text.la-pitroad {
-    display: inline;
-}
-.la-row.SIMRacingAppsCarStatusClassForeground-INVALID
-.la-carstatus .la-carstatus-text.la-invalid,
-.la-row.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND
-.la-carstatus .la-carstatus-text.la-invalid,
-.la-row.SIMRacingAppsCarStatusClassForeground-INVALID
-.la-carstatus,
-.la-row.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND
-.la-carstatus {
-    display: inline;
-    color:#fff;
-    font-size: 16px;
-    font-weight:300;
-}
 
-.la-row.SIMRacingAppsCarStatusClassForeground-INVALID
-.la-row-hanging,
-.la-row.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND
-.la-row-hanging {
-    display:none;
-}
-
-.la-row.SIMRacingAppsCarStatusClassForeground-INVALID
+/*
+    Remove background if it happens to have maybe died of death. 
+    Display skull icon with no background.
+*/
+.la-row.INVALID
 .la-carstatus::after,
-.la-row.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND
+.la-row.INVALID-LAPBEHIND
 .la-carstatus::after {
     background: none;
 }
-.la-row.SIMRacingAppsCarStatusClassForeground-INPITSTALL
-.la-carstatus .la-carstatus-text.la-inpit,
-.la-row.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL
-.la-carstatus .la-carstatus-text.la-inpit,
-.la-row.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL
-.la-carstatus .la-carstatus-text.la-inpit {
-    display: inline;
+.la-row.INVALID .la-name,
+.la-row.INVALID-LAPBEHIND .la-name,
+.la-row.INVALID-LAPAHEAD .la-name {
+    color: #666;
 }
-.la-row.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS
-.la-carstatus .la-carstatus-text.la-pitting {
-    display: inline;
+/* LAPPED CAR */
+.la-row.ONTRACK-LAPBEHIND .la-name {
+    color: mediumpurple;
 }
-.la-row.SIMRacingAppsCarStatusClassForeground-TOWING
-.la-carstatus .la-carstatus-text.la-towing {
-    display: inline;
-}
-.la-row.SIMRacingAppsCarStatusClassForeground-INPITSTALL-REFERENCE .la-carstatus,
-.la-row.SIMRacingAppsCarStatusClassForeground-INPITSTALL .la-carstatus,
-.la-row.SIMRacingAppsCarStatusClassForeground-ONPITROAD .la-carstatus {
+/*
+    If we have a valid status, we first must set the actual la-carstatus visible.
+*/
+.la-row.INGARAGE .la-carstatus,
+.la-row.INGARAGE-ME .la-carstatus,
+.la-row.INGARAGE-REFERENCE .la-carstatus,
+.la-row.INGARAGE-LEADER .la-carstatus,
+.la-row.TOWING .la-carstatus,
+.la-row.TOWING-ME .la-carstatus,
+.la-row.TOWING-REFERENCE .la-carstatus,
+.la-row.TOWING-LEADER .la-carstatus,
+.la-row.LEAVINGPITS .la-carstatus,
+.la-row.LEAVINGPITS-ME .la-carstatus,
+.la-row.LEAVINGPITS-REFERENCE .la-carstatus,
+.la-row.LEAVINGPITS-LEADER .la-carstatus,
+.la-row.APPROACHINGPITS .la-carstatus,
+.la-row.APPROACHINGPITS-ME .la-carstatus,
+.la-row.APPROACHINGPITS-REFERENCE .la-carstatus,
+.la-row.APPROACHINGPITS-LEADER .la-carstatus,
+.la-row.ENTERINGPITSTALL .la-carstatus,
+.la-row.ENTERINGPITSTALL-ME .la-carstatus,
+.la-row.ENTERINGPITSTALL-REFERENCE .la-carstatus,
+.la-row.ENTERINGPITSTALL-LEADER .la-carstatus,
+.la-row.EXITINGPITSTALL .la-carstatus,
+.la-row.EXITINGPITSTALL-ME .la-carstatus,
+.la-row.EXITINGPITSTALL-REFERENCE .la-carstatus,
+.la-row.EXITINGPITSTALL-LEADER .la-carstatus,
+.la-row.INPITSTALL .la-carstatus,
+.la-row.INPITSTALL-ME .la-carstatus,
+.la-row.INPITSTALL-REFERENCE .la-carstatus,
+.la-row.INPITSTALL-LEADER .la-carstatus,
+.la-row.INPITSTALL-LAPBEHIND .la-carstatus,
+.la-row.ONPITROAD .la-carstatus,
+.la-row.ONPITROAD-ME .la-carstatus,
+.la-row.ONPITROAD-REFERENCE .la-carstatus,
+.la-row.ONPITROAD-LEADER .la-carstatus {
     display: block;
     position: absolute;
     right: 2px;
@@ -205,6 +252,75 @@ ul.la-widget {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+    /*
+    THESE ARE THE MESSAGE BOXES TO DISPLAY
+*/
+    /* PITROAD MESSAGE                                                                          */
+    .la-row.LEAVINGPITS .la-carstatus .la-carstatus-text.la-pitroad,
+    .la-row.LEAVINGPITS-ME .la-carstatus .la-carstatus-text.la-pitroad,
+    .la-row.LEAVINGPITS-REFERENCE .la-carstatus .la-carstatus-text.la-pitroad,
+    .la-row.LEAVINGPITS-LEADER .la-carstatus .la-carstatus-text.la-pitroad,
+    .la-row.LEAVINGPITS-LEADER .la-carstatus .la-carstatus-text.la-pitroad,
+    .la-row.ONPITROAD .la-carstatus .la-carstatus-text.la-pitroad,
+    .la-row.ONPITROAD-ME .la-carstatus .la-carstatus-text.la-pitroad,
+    .la-row.ONPITROAD-REFERENCE .la-carstatus .la-carstatus-text.la-pitroad,
+    .la-row.ONPITROAD-LEADER .la-carstatus .la-carstatus-text.la-pitroad {
+        display: inline;
+    }
+    /* PITTING MESSAGE                                                                          */
+    .la-row.APPROACHINGPITS .la-carstatus .la-carstatus-text.la-pitting,
+    .la-row.APPROACHINGPITS-ME .la-carstatus .la-carstatus-text.la-pitting,
+    .la-row.APPROACHINGPITS-LEADER .la-carstatus .la-carstatus-text.la-pitting,
+    .la-row.APPROACHINGPITS-REFERENCE .la-carstatus .la-carstatus-text.la-pitting {
+        display: inline;
+    }
+    /* PIT MESSAGE                                                                              */
+    .la-row.INPITSTALL .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.INPITSTALL-ME .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.INPITSTALL-REFERENCE .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.INPITSTALL-LEADER .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.ENTERINGPITSTALL .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.ENTERINGPITSTALL-ME .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.ENTERINGPITSTALL-LEADER .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.ENTERINGPITSTALL-REFERENCE .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.EXITINGPITSTALL .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.EXITINGPITSTALL-ME .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.EXITINGPITSTALL-LEADER .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.EXITINGPITSTALL-REFERENCE .la-carstatus .la-carstatus-text.la-inpit {
+        display: inline;
+    }
+    /* TOWING                                                                                   */
+    .la-row.TOWING .la-carstatus .la-carstatus-text.la-towing,
+    .la-row.TOWING-ME .la-carstatus .la-carstatus-text.la-towing,
+    .la-row.TOWING-LEADER .la-carstatus .la-carstatus-text.la-towing,
+    .la-row.TOWING-REFERENCE .la-carstatus .la-carstatus-text.la-towing {
+        display: inline;
+    }
+
+
+/* DEATH */
+.la-row.INVALID
+.la-carstatus .la-carstatus-text.la-invalid,
+.la-row.INVALID-LAPBEHIND
+.la-carstatus .la-carstatus-text.la-invalid,
+.la-row.INVALID
+.la-carstatus,
+.la-row.INVALID-LAPBEHIND
+.la-carstatus {
+    display: inline;
+    color: #66;
+    opacity:.1;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.la-row.INVALID
+.la-row-hanging,
+.la-row.INVALID-LAPBEHIND
+.la-row-hanging {
+    display: none;
+}
+
 .la-carstatus::after {
     position: absolute !important;
     content: '';

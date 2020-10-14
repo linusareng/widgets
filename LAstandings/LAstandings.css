@@ -98,9 +98,11 @@ ul.la-widget {
     position: relative;
 }
 /* rows according to sra */
-.la-row.ONTRACK-REFERENCE .la-name {
+.la-row.ONTRACK-REFERENCE .la-name,
+.la-row.GridRowBackground-reference .la-name {
     color: yellow !important;
 }
+
 .la-row.GridRowBackground-reference::before {
     content: '';
     width: 2px;
@@ -109,7 +111,7 @@ ul.la-widget {
     position: absolute;
     top: 20%;
     left: 0;
-    z-index:2;
+    z-index: 2;
 }
 .la-row.ONTRACK-LEADER .la-name {
     color: #fff !important;
@@ -157,10 +159,53 @@ ul.la-widget {
 .la-carstatus::after {
     background: none;
 }
+.la-row.INVALID .la-name,
+.la-row.INVALID-LAPBEHIND .la-name,
+.la-row.INVALID-LAPAHEAD .la-name {
+    color: #666;
+}
+/* LAPPED CAR */
+.la-row.ONTRACK-LAPBEHIND .la-name {
+    color: mediumpurple;
+}
+.la-row.INGARAGE .la-name,
+.la-row.INGARAGE-ME .la-name,
+.la-row.INGARAGE-REFERENCE .la-name,
+.la-row.INGARAGE-LEADER .la-name,
+.la-row.TOWING .la-name,
+.la-row.TOWING-ME .la-name,
+.la-row.TOWING-REFERENCE .la-name,
+.la-row.TOWING-LEADER .la-name,
+.la-row.LEAVINGPITS .la-name,
+.la-row.LEAVINGPITS-ME .la-name,
+.la-row.LEAVINGPITS-REFERENCE .la-name,
+.la-row.LEAVINGPITS-LEADER .la-name,
+.la-row.APPROACHINGPITS .la-name,
+.la-row.APPROACHINGPITS-ME .la-name,
+.la-row.APPROACHINGPITS-REFERENCE .la-name,
+.la-row.APPROACHINGPITS-LEADER .la-name,
+.la-row.ENTERINGPITSTALL .la-name,
+.la-row.ENTERINGPITSTALL-ME .la-name,
+.la-row.ENTERINGPITSTALL-REFERENCE .la-name,
+.la-row.ENTERINGPITSTALL-LEADER .la-name,
+.la-row.EXITINGPITSTALL .la-name,
+.la-row.EXITINGPITSTALL-ME .la-name,
+.la-row.EXITINGPITSTALL-REFERENCE .la-name,
+.la-row.EXITINGPITSTALL-LEADER .la-name,
+.la-row.INPITSTALL .la-name,
+.la-row.INPITSTALL-ME .la-name,
+.la-row.INPITSTALL-REFERENCE .la-name,
+.la-row.INPITSTALL-LEADER .la-name,
+.la-row.INPITSTALL-LAPBEHIND .la-name,
+.la-row.ONPITROAD .la-name,
+.la-row.ONPITROAD-ME .la-name,
+.la-row.ONPITROAD-REFERENCE .la-name,
+.la-row.ONPITROAD-LEADER .la-name {
+    color: #666;
+}
 /*
     If we have a valid status, we first must set the actual la-carstatus visible.
 */
-
 .la-row.INGARAGE .la-carstatus,
 .la-row.INGARAGE-ME .la-carstatus,
 .la-row.INGARAGE-REFERENCE .la-carstatus,
@@ -189,6 +234,7 @@ ul.la-widget {
 .la-row.INPITSTALL-ME .la-carstatus,
 .la-row.INPITSTALL-REFERENCE .la-carstatus,
 .la-row.INPITSTALL-LEADER .la-carstatus,
+.la-row.INPITSTALL-LAPBEHIND .la-carstatus,
 .la-row.ONPITROAD .la-carstatus,
 .la-row.ONPITROAD-ME .la-carstatus,
 .la-row.ONPITROAD-REFERENCE .la-carstatus,
@@ -261,7 +307,7 @@ ul.la-widget {
 .la-row.INVALID-LAPBEHIND
 .la-carstatus {
     display: inline;
-    color:#fff;
+    color:#666;
     font-size: 16px;
     font-weight:300;
 }
