@@ -1,31 +1,20 @@
 <div class="wrapper">  
     <ul class="la-fuel la-widget">
       <li class="la-fuel-remaining-wrapper">
-        <div class="la-fuel-current-level"></div>
+        <div class="la-fuel-current-level"
+          data-ng-style = "{ width: fuelLevelPercentage+'%' }"
+        ></div>
       </li>
       <li class="la-row la-fuel-row">
         <div class="la-text">Fuel</div>
-        <div class="la-current la-skew la-skew-white">Current: 18.5</div>
-        <div class="la-needed la-skew la-skew-white-border">Needed: 48.4</div>
-        <div class="la-pitwindow la-pitwindow-closed la-skew la-skew-white-border">Pitwindow closed</div>
+        <div class="la-current la-skew la-skew-white">
+        Current: <span data-ng-bind="data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"></span></div>
+        <div class="la-needed la-skew la-skew-white-border">
+        Needed: <span data-ng-bind="fuelLevelToFinish|sraNumber:1:true"></span>
+      </div>
+        <div class="la-pitwindow la-pitwindow-closed la-skew la-skew-white-border">
+          Pitwindow closed
+        </div>
       </li>
     </ul>  
-  </div>
-
-  <!-- pitwindow open, appears when the fuel 
-    needed < tank size 
-    extra good: (&& currentfuel laps < laps left in race)
--->
-  <div class="wrapper">
-    <ul class="la-fuel la-widget">
-      <li class="la-fuel-remaining-wrapper">
-        <div class="la-fuel-current-level"></div>
-      </li>
-      <li class="la-row la-fuel-row">
-        <div class="la-text">Fuel</div>
-        <div class="la-current la-skew la-skew-white">Current: 18.5</div>
-        <div class="la-needed la-skew la-skew-white-border">Needed: 48.4</div>
-        <div class="la-pitwindow la-pitwindow-open la-skew la-skew-orange">Pitwindow open</div>
-      </li>
-    </ul>
   </div>

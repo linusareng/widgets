@@ -1,0 +1,14 @@
+{
+    "doc": "JavaScriptDoc/sra-relative.html",
+    "name": [
+      "LA-Twitchchat"
+    ],
+    "description": [
+      "Embed a twitch chat"
+    ],
+    "url": "apps/WidgetLoader?widget=LAtwitchchat&",
+    "icon": "widgets/LAtwitchchat/laicon.png",
+    "width": [ 350 ],
+    "height": [ 400 ],
+    "args": ""
+  }
