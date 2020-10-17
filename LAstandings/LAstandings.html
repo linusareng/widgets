@@ -41,11 +41,11 @@
              data-sra-data="/iRacing/VarHeaders/REFERENCE/CarIdxTireCompound/Type">
             Test tire: <span data-ng-bind="data.iRacing.VarHeaders.REFERENCE.CarIdxTireCompound.Type"></span>
         </div>
-
-        class             = "SIMRacingApps-Widget-StandingsTop10-Run"
-        data-sra-data     = "Car/{{position}}/Lap/SincePitting"
-        data-ng-bind      = "data.Car[position].Lap.SincePitting.Value">
-
+        <div class="SIMRacingApps-Widget-StandingsTop10-Run"
+             data-sra-data="Car/REFERENCE/Lap/SincePitting"
+             ng-model="data.Car.REFERENCE.Lap.SincePitting.Value">
+            laps since pittin {{data.Car.REFERENCE.Lap.SincePitting.Value}}
+        </div>
 
     </div>
 
@@ -146,7 +146,16 @@
                  data-sra-args-interval="{{defaultInterval}}"
                  data-sra-data="Car/{{position}}/DriverRating"
                  ng-model="data.Car[position].DriverRating.Value">
-                {{ (data.Car[position].DriverRating.Value.split('-')[0]/1000)|number:1}}k
+                {{ (data.Car[position].DriverRating.Value.split('(')[0]/1000)|number:1}}k
+
+                <span class="la-driver-rating-change"
+                      data-sra-args-interval="{{defaultInterval}}"
+                      data-sra-data="Car/{{position}}/DriverRatingDelta"
+                      ng-model="data.Car[position].DriverRatingDelta.Value"
+                      >
+                    {{data.Car[position].DriverRatingDelta.Value}}
+
+                </span>
             </div>
 
             <!-- gap -->
