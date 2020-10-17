@@ -250,6 +250,7 @@ li.ONTRACK-REFERENCE .la-no-status {
 .la-row.INPITSTALL-REFERENCE .la-carstatus,
 .la-row.INPITSTALL-LEADER .la-carstatus,
 .la-row.INPITSTALL-LAPBEHIND .la-carstatus,
+.la-row.INPITSTALL-LAPAHEAD .la-carstatus,
 .la-row.ONPITROAD .la-carstatus,
 .la-row.ONPITROAD-ME .la-carstatus,
 .la-row.ONPITROAD-REFERENCE .la-carstatus,
@@ -289,11 +290,12 @@ li.ONTRACK-REFERENCE .la-no-status {
         display: inline;
     }
 /* PIT MESSAGE                                                                              */
-    .la-row.INPITSTALL-LAPBEHIND .la-carstatus .la-carstatus-text.la-inpit
+    .la-row.INPITSTALL-LAPBEHIND .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.INPITSTALL .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.INPITSTALL-ME .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.INPITSTALL-REFERENCE .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.INPITSTALL-LEADER .la-carstatus .la-carstatus-text.la-inpit,
+    .la-row.INPITSTALL-LAPAHEAD .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.ENTERINGPITSTALL .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.ENTERINGPITSTALL-ME .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.ENTERINGPITSTALL-LEADER .la-carstatus .la-carstatus-text.la-inpit,
