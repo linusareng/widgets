@@ -153,6 +153,7 @@ li.ONTRACK .la-no-status,
 li.ONTRACK-LAPAHEAD .la-no-status,
 li.ONTRACK-LAPBEHIND .la-no-status,
 li.ONTRACK-LEADER .la-no-status,
+li.ONTRACK-ME .la-no-status,
 li.ONTRACK-REFERENCE .la-no-status {
     display: inline-block;
     position: absolute;
