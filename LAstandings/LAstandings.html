@@ -127,7 +127,12 @@
                  ng-model="(data.Car[position].DriverName.Value|sraEncodeEntities)">
                 {{ (data.Car[position].DriverName.Value.split(' ')[0]) }}
                 {{ (data.Car[position].DriverName.Value.split(' ')[1]).substr(0,1) }}.
-
+                <!-- last pitstop -->
+                <span class="la-no-status"
+                      data-sra-data="Car/{{position}}/Lap/SincePitting"
+                      ng-model="data.Car[position].Lap.SincePitting.Value">
+                    {{data.Car[position].Lap.SincePitting.Value-1}}L
+                </span>
                 <!-- carstatus: pit, blackflag, towing -->
                 <div class="la-carstatus la-fixed-width-font">
 
@@ -138,7 +143,9 @@
                     <span class="la-carstatus-text la-offtrack">Danger</span>
                     <span class="la-carstatus-text la-invalid">&#9760;</span>
 
+
                 </div>
+
             </div>
 
             <!-- irating -->
@@ -146,6 +153,7 @@
                  data-sra-args-interval="{{defaultInterval}}"
                  data-sra-data="Car/{{position}}/DriverRating"
                  ng-model="data.Car[position].DriverRating.Value">
+                <!-- the split only works on single class series, because reasons. Need to parse first ints instead -->
                 {{ (data.Car[position].DriverRating.Value.split('(')[0]/1000)|number:1}}k
 
                 <span class="la-driver-rating-change"

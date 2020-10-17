@@ -134,7 +134,7 @@ ul.la-widget {
     TOWING-ME ? me on everything a possibility?
 */
 .la-row div.la-carstatus {
-    display: none;
+    
     background: none;
     color: #000;
     position: absolute;
@@ -148,7 +148,20 @@ ul.la-widget {
     position: relative;
     z-index: 2;
 }
-
+.la-no-status { display: none; }
+li.ONTRACK .la-no-status,
+li.ONTRACK-LAPBEHIND .la-no-status,
+li.ONTRACK-LEADER .la-no-status,
+li.ONTRACK-REFERENCE .la-no-status {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    font-size: 7px;
+    color: #999;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+}
 /*
     Remove background if it happens to have maybe died of death. 
     Display skull icon with no background.
@@ -274,6 +287,7 @@ ul.la-widget {
         display: inline;
     }
 /* PIT MESSAGE                                                                              */
+    .la-row.INPITSTALL-LAPBEHIND .la-carstatus .la-carstatus-text.la-inpit
     .la-row.INPITSTALL .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.INPITSTALL-ME .la-carstatus .la-carstatus-text.la-inpit,
     .la-row.INPITSTALL-REFERENCE .la-carstatus .la-carstatus-text.la-inpit,
@@ -317,10 +331,6 @@ ul.la-widget {
 .la-row-hanging {
     display:none;
 }
-
-
-
-
 
 .la-carstatus::after {
     position: absolute !important;
