@@ -520,6 +520,15 @@ FLAGS
     background: black;
     background: linear-gradient(177deg, black 50%, #333 140%);
   }
+.la-flag.la-flag-checkered {
+    background: black;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1)),
+    /* checkered effect */
+        linear-gradient(to right, black 50%, white 50%), linear-gradient(to bottom, black 50%, white 50%);
+    background-blend-mode: normal, normal, normal;
+    background-size: 2em 2em;
+}
 .la-flag {
     width: 90%;
     height: 4px;
@@ -558,7 +567,8 @@ FLAGS
 .la-flag-red.pulse-urgency,
 .la-flag-blue.pulse-urgency,
 .la-flag-green.pulse-urgency,
-.la-flag-black.pulse-urgency {
+.la-flag-black.pulse-urgency,
+.la-flag-checkered.pulse-urgency {
     box-shadow: 0 0 20px rgba(255,255,255,1);
     animation: pulse-urgent 800ms ease-in-out infinite;
 }

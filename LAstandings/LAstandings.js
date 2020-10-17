@@ -26,7 +26,7 @@ define(['SIMRacingApps', 'css!widgets/LAstandings/LAstandings', 'widgets/CarNumb
             name: 'sraLAstandings',
             url: 'LAstandings',
             template: 'LAstandings.html',
-            defaultWidth: 1400,
+            defaultWidth: 1600,
             defaultHeight: 2600,
             defaultInterval: 1000, //initialize with the default interval
             module: angular.module('SIMRacingApps') //get the main module
