@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "F1-bold";
+    src: url("Formula1-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "F1-regular";
+    src: url("Formula1-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "F1-wide";
+    src: url("Formula1-Wide.otf") format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background: #333;
+    font-family: Montserrat;
+    font-family: "Formula1";
+    font-weight: 600;
+    padding: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul.f1standings {
+    width: 110px;
+  }
+  ul.f1standings li {
+    background: rgba(0,0,0,.8);
+    display: grid;
+    grid-template-columns: 30px auto;
+    padding: 2px;
+    grid-column-gap: 10px;
+    position: relative;
+    z-index:1;
+  }
+  .header {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-top-right-radius: 10px;
+  }
+  .intro {
+    padding: 6px 0 2px;
+    grid-column: 1 / span 2;
+    transform: scaleX(1.4);
+  }
+  .lapcount {
+    padding: 0 6px 4px;
+    grid-column: 1 / span 2;
+    font-weight: 300;
+  }
+  .position {
+    background: white;
+    color: black;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 2px;
+    border-bottom-right-radius: 6px;
+  }
+  .driver-abbrev {
+    color: white;
+    line-height: 30px;
+    padding-left: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .driver-abbrev::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 3px;
+    height: 60%;
+    background: yellow;
+  }
+  .extra {
+    display: none;
+  }
+  ul.f1standings li.driver-row-out {
+    background: rgba(0,0,0,.2);
+  }
+  .driver-row-out .driver-abbrev {
+    color: #666;
+    grid-column: 1 / span 2;
+    margin-left: 12px;
+    font-size: 12px;
+  }
+  .driver-row-out .driver-abbrev::before {
+    background: #666;
+  }
+  
+  li.driver-row i {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background: mediumpurple;
+    position: absolute;
+    left: -30px;
+    top: 2px;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+  }
+  li.status-inpit i.icon-inpit { 
+    display: inline-block; 
+    background: rgba(0,0,0,1);
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 300;
+  }
+  li.fast-lap i.icon-timer { display: inline-block; }

@@ -1,0 +1,14 @@
+{
+  "doc": "JavaScriptDoc/sra-relative.html",
+  "name": [
+    "LA-standings"
+  ],
+  "description": [
+    "Shows top drivers"
+  ],
+  "url": "apps/WidgetLoader?widget=LAstandings&",
+  "icon": "widgets/LAstandings/laicon.png",
+  "width": [ 800 ],
+  "height": [ 480 ],
+  "args": ""
+}
