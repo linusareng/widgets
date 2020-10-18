@@ -19,9 +19,9 @@
 
         <div class=""
              data-sra-args-interval="{{defaultInterval}}"
-             data-sra-data="Car/REFERENCE/PitTimes"
-             ng-model="data.Car.REFERENCE.PitTimes">
-            Pit time: {{data.Car.REFERENCE.PitTimes}}
+             data-sra-data="Car/REFERENCE/PitTime"
+             ng-model="data.Car.REFERENCE.PitTime.Value">
+            Pit time: {{data.Car.REFERENCE.PitTime.Value}}
         </div>
 
         <div class=""
@@ -51,7 +51,7 @@
              data-sra-data="Car/REFERENCE/Lap/SincePitting"
              ng-model="data.Car.REFERENCE.Lap.SincePitting.Value">
             <b>
-                try to calc pit lap {{data.Session.Lap.Value - data.Car.REFERENCE.Lap.SincePitting.Value}} <br />
+                Last pitstop was on lap {{data.Session.Lap.Value - data.Car.REFERENCE.Lap.SincePitting.Value}} <br />
             </b> lap {{data.Session.Lap.Value}}
         </div>
 
@@ -140,7 +140,7 @@
                 <span class="la-no-status"
                       data-sra-data="Car/{{position}}/Lap/SincePitting"
                       ng-model="data.Car[position].Lap.SincePitting.Value">
-                    PIT LAP {{data.Session.Lap.Value - data.Car.REFERENCE.Lap.SincePitting.Value}}
+                        {{ data.Car[position].Lap.SincePitting.Value }} L
                 </span>
                 <!-- carstatus: pit, blackflag, towing -->
                 <div class="la-carstatus la-fixed-width-font">
