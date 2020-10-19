@@ -1,12 +1,12 @@
 {
   "doc": "JavaScriptDoc/sra-relative.html",
   "name": [
-    "LA-standings"
+    "LA-Formula1-Standings"
   ],
   "description": [
-    "Shows top drivers"
+    "F1 baby!"
   ],
-  "url": "apps/WidgetLoader?widget=LAstandings&",
+  "url": "apps/WidgetLoader?widget=LA-Formula1-Standings&",
   "icon": "widgets/LAstandings/laicon.png",
   "width": [ 800 ],
   "height": [ 480 ],
