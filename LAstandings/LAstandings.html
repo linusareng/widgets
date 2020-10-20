@@ -1,5 +1,5 @@
 <div class="la-widget-wrapper">
-    <div style="background:rgba(0,0,0,.6);font-size: 9px;display:block;">
+    <div style="background:rgba(0,0,0,.6);font-size: 9px;display:none;">
         <h2>
             EXPERIMENTAL OVERLAY:<br />
             MIGHT BE INCORRECT
@@ -161,19 +161,13 @@
                  data-sra-args-interval="{{defaultInterval}}"
                  data-sra-data="Car/{{position}}/DriverRating"
                  ng-model="data.Car[position].DriverRating.Value">
-                <!-- the split only works on single class series, because reasons. Need to parse first ints instead -->
-                <!-- 
-                    (parseInt("1234(+56)A1.23") / 1000).toFixed(1) 
-                    {{(parseInt( data.Car[position].DriverRating.Value ) / 1000).toFixed(1)}}
-                -->
-                {{ (data.Car[position].DriverRating.Value.split('(')[0]/1000)|number:1}}k
+                {{ (data.Car[position].DriverRating.Value.split('(')[0].split('-')[0]/1000)|number:1}}k
 
                 <span class="la-driver-rating-change"
                       data-sra-args-interval="{{defaultInterval}}"
                       data-sra-data="Car/{{position}}/DriverRatingDelta"
-                      ng-model="data.Car[position].DriverRatingDelta.Value"
-                      >
-                    {{data.Car[position].DriverRatingDelta.Value}}
+                      ng-model="data.Car[position].DriverRatingDelta.Value">
+                    {{data.Car[position].DriverRatingDelta.Value > 0 ? data.Car[position].DriverRatingDelta.Value : ''}}
 
                 </span>
             </div>
