@@ -37,11 +37,17 @@
                 {{ data.Car[position].PositionClass.Value }}
             </div>
 
-            <!-- driver initials -->
+            <!-- driver name -->
             <div class="la-name"
-                 data-sra-data="Car/{{position}}/DriverInitials"
-                 ng-model="(data.Car[position].DriverInitials.Value|sraEncodeEntities)">
-                {{ data.Car[position].DriverInitials.Value}}
+                 data-sra-data="Car/{{position}}/DriverName"
+                 ng-model="(data.Car[position].DriverName.Value|sraEncodeEntities)">
+                {{ data.Car[position].DriverName.Value.split(" ").slice(-1).toString().substr(0,3)}}
+
+                <div class="la-color-wrap"
+                     data-sra-data="Car/{{position}}/Color"
+                     ng-model="data.Car[position].Color">
+                    <div class="la-color-block" style="background:{{data.Car[position].Color|sraRGB}}"></div>
+                </div>
             </div>
         </li>
 
