@@ -1,12 +1,13 @@
-<link rel="stylesheet" href="LA-Formula1-Standings.css">
 <div class="la-widget-wrapper">
     
-    <ul class="la-standings la-widget">
+    <ul class="f1standings la-widget">
 
         <!-- session lap number -->
         <li class="la-header la-row">
             <div class="intro">Lap</div>
-            <div class="lapcount">
+            <div class="lapcount"
+                 data-sra-data="Session/Lap;Session/LapsToGo"
+                 >
                 {{ data.Session.Lap.Value }} 
                 / 
                 {{ (data.Session.Lap.Value+data.Session.LapsToGo.Value-1) }}
@@ -14,10 +15,13 @@
         </li>
 
         <!-- top 20 standings, this li is repeated for every entry -->
-        <li class="la-row"
+        <li class="la-row driver-row"
             data-ng-repeat="position in ['PC1', 'PC2','PC3','PC4','PC5','PC6','PC7','PC8','PC9','PC10', 'PC11','PC12','PC13','PC14','PC15','PC16','PC17','PC18','PC19','PC20']"
-            data-sra-data="Car/{{position}}/Id"
-            data-sra-args-interval="{{defaultInterval}}">
+            data-sra-data="Car/{{position}}/Id;Car/{{position}}/StatusClass;Car/{{position}}/IsEqual/TRANSMITTING;Car/{{position}}/IsEqual/REFERENCE"
+            data-sra-args-interval="{{defaultInterval}}"
+            data-ng-style="{ display: data.Car[position].Id.Value == -1 ? 'none' : 'grid' }"
+            data-ng-class="data.Car[position].StatusClass.Value"
+            >
 
             <!-- 
                 icons and extra that hangs to the left 

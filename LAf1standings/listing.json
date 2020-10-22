@@ -1,13 +1,13 @@
 {
   "doc": "JavaScriptDoc/sra-relative.html",
   "name": [
-    "LA-Formula1-Standings"
+    "LAf1standings"
   ],
   "description": [
     "F1 baby!"
   ],
-  "url": "apps/WidgetLoader?widget=LA-Formula1-Standings&",
-  "icon": "widgets/LAstandings/laicon.png",
+  "url": "apps/WidgetLoader?widget=LAf1standings&",
+  "icon": "widgets/LAf1standings/laicon.png",
   "width": [ 800 ],
   "height": [ 480 ],
   "args": ""

@@ -16,12 +16,12 @@
   }
   body {
     background: #333;
-    font-family: Montserrat;
-    font-family: "Formula1";
+    font-family: "F1-bold";
     font-weight: 600;
     padding: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: 62.5%;
   }
   ul {
     list-style: none;
@@ -40,10 +40,10 @@
     position: relative;
     z-index:1;
   }
-  .header {
+  .la-header {
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 1em;
     border-top-right-radius: 10px;
   }
   .intro {
@@ -55,25 +55,30 @@
     padding: 0 6px 4px;
     grid-column: 1 / span 2;
     font-weight: 300;
+    font-family: F1-regular;
   }
-  .position {
+.la-pos {
     background: white;
     color: black;
-    font-weight: 300;
-    font-size: 14px;
+    font-family: F1-regular;
+    font-size: 0.6em;
     text-align: center;
     line-height: 30px;
     margin-left: 2px;
     border-bottom-right-radius: 6px;
-  }
-  .driver-abbrev {
+}
+.ng-empty {
+    display: none;
+}
+  .la-name {
     color: white;
     line-height: 30px;
     padding-left: 10px;
     position: relative;
     z-index: 1;
+    font-size: 0.8em;
   }
-  .driver-abbrev::before {
+  .la-name::before {
     content: '';
     position: absolute;
     top: 20%;
@@ -88,13 +93,13 @@
   ul.f1standings li.driver-row-out {
     background: rgba(0,0,0,.2);
   }
-  .driver-row-out .driver-abbrev {
+  .driver-row-out .la-name {
     color: #666;
     grid-column: 1 / span 2;
     margin-left: 12px;
     font-size: 12px;
   }
-  .driver-row-out .driver-abbrev::before {
+  .driver-row-out .la-name::before {
     background: #666;
   }
   
@@ -110,11 +115,51 @@
     line-height: 30px;
     text-align: center;
   }
-  li.status-inpit i.icon-inpit { 
-    display: inline-block; 
+.driver-row.INGARAGE i.icon-inpit,
+.driver-row.INGARAGE-ME i.icon-inpit,
+.driver-row.INGARAGE-REFERENCE i.icon-inpit,
+.driver-row.INGARAGE-LEADER i.icon-inpit,
+.driver-row.TOWING i.icon-inpit,
+.driver-row.TOWING-ME i.icon-inpit,
+.driver-row.TOWING-REFERENCE i.icon-inpit,
+.driver-row.TOWING-LEADER i.icon-inpit,
+.driver-row.LEAVINGPITS i.icon-inpit,
+.driver-row.LEAVINGPITS-ME i.icon-inpit,
+.driver-row.LEAVINGPITS-REFERENCE i.icon-inpit,
+.driver-row.LEAVINGPITS-LEADER i.icon-inpit,
+.driver-row.APPROACHINGPITS i.icon-inpit,
+.driver-row.APPROACHINGPITS-ME i.icon-inpit,
+.driver-row.APPROACHINGPITS-REFERENCE i.icon-inpit,
+.driver-row.APPROACHINGPITS-LEADER i.icon-inpit,
+.driver-row.ENTERINGPITSTALL i.icon-inpit,
+.driver-row.ENTERINGPITSTALL-ME i.icon-inpit,
+.driver-row.ENTERINGPITSTALL-REFERENCE i.icon-inpit,
+.driver-row.ENTERINGPITSTALL-LEADER i.icon-inpit,
+.driver-row.EXITINGPITSTALL i.icon-inpit,
+.driver-row.EXITINGPITSTALL-ME i.icon-inpit,
+.driver-row.EXITINGPITSTALL-REFERENCE i.icon-inpit,
+.driver-row.EXITINGPITSTALL-LEADER i.icon-inpit,
+.driver-row.INPITSTALL i.icon-inpit,
+.driver-row.INPITSTALL-ME i.icon-inpit,
+.driver-row.INPITSTALL-REFERENCE i.icon-inpit,
+.driver-row.INPITSTALL-LEADER i.icon-inpit,
+.driver-row.INPITSTALL-LAPBEHIND i.icon-inpit,
+.driver-row.INPITSTALL-LAPAHEAD i.icon-inpit,
+.driver-row.ONPITROAD i.icon-inpit,
+.driver-row.ONPITROAD-ME i.icon-inpit,
+.driver-row.ONPITROAD-REFERENCE i.icon-inpit,
+.driver-row.ONPITROAD-LEADER i.icon-inpit {
+    display: inline-block;
     background: rgba(0,0,0,1);
     font-size: 9px;
     font-style: normal;
     font-weight: 300;
-  }
+}
+li.status-inpit i.icon-inpit {
+    display: inline-block;
+    background: rgba(0,0,0,1);
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 300;
+}
   li.fast-lap i.icon-timer { display: inline-block; }

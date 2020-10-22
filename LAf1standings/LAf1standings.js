@@ -8,9 +8,9 @@
  * <p>
  * Example:
  * <p><b>
- * &lt;sra-standings&gt;&lt;/sra-standings&gt;<br />
+ * &lt;sra-standings&gt;&lt;/sra-LA-Formula1-Standings&gt;<br />
  * </b>
- * <img src="../widgets/Standings/icon.png" />
+ * <img src="../widgets/LA-Formula1-Standings/icon.png" />
  * @ngdoc directive
  * @name sra-LA-Formula1-Standings
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 1000.
@@ -19,15 +19,15 @@
  * @copyright Copyright (C) 2015 - 2020 Jeffrey Gilliam
  * @license Apache License 2.0
  */
-define(['SIMRacingApps', 'css!widgets/LA-Formula1-Standings/LA-Formula1-Standings', 'widgets/CarNumber/CarNumber'],
+define(['SIMRacingApps', 'css!widgets/LAf1standings/LAf1standings', 'widgets/CarNumber/CarNumber'],
     function (SIMRacingApps) {
 
         var self = {
-            name: 'sraLA-Formula1-Standings',
-            url: 'LA-Formula1-Standings',
-            template: 'LA-Formula1-Standings.html',
-            defaultWidth: 1600,
-            defaultHeight: 2600,
+            name: 'sraLAf1standings',
+            url: 'LAf1standings',
+            template: 'LAf1standings.html',
+            defaultWidth: 300,
+            defaultHeight: 600,
             defaultInterval: 1000, //initialize with the default interval
             module: angular.module('SIMRacingApps') //get the main module
         };
@@ -46,6 +46,10 @@ define(['SIMRacingApps', 'css!widgets/LA-Formula1-Standings/LA-Formula1-Standing
                             $scope.defaultInterval = self.defaultInterval;
                             $scope.sraRelativeCar = "REFERENCE";
 
+                            //load translations
+                            sraDispatcher.loadTranslations(sraDispatcher.getWidgetUrl(self.url), 'text', function (path) {
+                                $scope.translations = sraDispatcher.getTranslation(path);
+                            });
                         }]
                         , link: function ($scope, $element, $attrs) {
                             $scope.names = sraDispatcher.subscribe($scope, $attrs, self.defaultInterval); //register subscriptions and options to the dispatcher
