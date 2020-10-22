@@ -167,7 +167,7 @@
                       data-sra-args-interval="{{defaultInterval}}"
                       data-sra-data="Car/{{position}}/DriverRatingDelta"
                       ng-model="data.Car[position].DriverRatingDelta.Value">
-                    {{data.Car[position].DriverRatingDelta.Value > 0 ? data.Car[position].DriverRatingDelta.Value : ''}}
+                    {{data.Car[position].DriverRatingDelta.Value != 0 ? data.Car[position].DriverRatingDelta.Value : ''}}
 
                 </span>
             </div>
