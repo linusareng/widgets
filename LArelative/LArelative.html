@@ -54,7 +54,7 @@
         <div class="la-ir la-skew la-skew-white"
              data-sra-data="Car/{{position}}/DriverRating"
              ng-model="data.Car[position].DriverRating.Value">
-            {{ (data.Car[position].DriverRating.Value.split('(')[0] / 1000) | number:1 }}k
+            {{ (data.Car[position].DriverRating.Value.split('(')[0].split('-')[0] / 1000)|number:1 }}k
         </div>
 
         <!-- interval -->
